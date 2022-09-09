@@ -1,0 +1,16 @@
+{
+  "name": "sandbox-egghead-js-promises-in-depth",
+  "version": "1.0.0",
+  "description": "A sandbox to work through the JavaScript Promises in Depth course on Egghead",
+  "main": "starwars-films.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.2.10"
+  }
+}
