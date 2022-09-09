@@ -16,7 +16,7 @@ fetch(API_URL + "films")
       console.log("filmTitles: ", filmTitles);
     });
   })
-  .then(undefined, (error) => console.log("error: ", error));
+  .catch((error) => console.log("error: ", error));
 
 function getFilmTitles(films) {
   return films
