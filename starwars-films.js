@@ -8,6 +8,8 @@ responsePromise
   .then((response) => {
     return response.json();
   })
-  .then((json) => {
-    console.log("json: ", json);
+  .then((films) => {
+    const filmTitles = films.map((film) => `${film.episode_id}. ${film.title}`);
+    console.log("filmTitles: ", filmTitles);
+    console.log("films: ", films);
   });
