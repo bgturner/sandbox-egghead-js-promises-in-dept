@@ -8,9 +8,7 @@ let filmTitles = "Loading...";
 console.log(filmTitles);
 
 responsePromise
-  .then((response) => {
-    return response.json();
-  })
+  .then((response) => response.json())
   .then((films) => {
     const filmTitles = films
       .sort((a, b) => a.episode_id - b.episode_id)
