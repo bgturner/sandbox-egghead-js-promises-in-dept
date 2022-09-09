@@ -2,12 +2,10 @@ import fetch from "node-fetch";
 
 const API_URL = "https://starwars.egghead.training/";
 
-const responsePromise = fetch(API_URL + "films");
-
 let filmTitles = "Loading...";
 console.log(filmTitles);
 
-responsePromise
+fetch(API_URL + "films")
   .then((response) => response.json())
   .then((films) => {
     const filmTitles = films
