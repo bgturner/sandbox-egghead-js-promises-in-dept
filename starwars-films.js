@@ -5,15 +5,18 @@ const API_URL = "https://starwars.egghead.training/";
 let filmTitles = "Loading...";
 console.log(filmTitles);
 
-fetch(API_URL + "films").then(
-  (response) => {
-    return response.json().then((films) => {
+fetch(API_URL + "films")
+  .then((response) => {
+    // return response.json().then((films) => {
+    //   const filmTitles = getFilmTitles(films);
+    //   console.log("filmTitles: ", filmTitles);
+    // });
+    return Promise.reject("Invalid JSON").then((films) => {
       const filmTitles = getFilmTitles(films);
       console.log("filmTitles: ", filmTitles);
     });
-  },
-  (error) => console.log("error: ", error)
-);
+  })
+  .then(undefined, (error) => console.log("error: ", error));
 
 function getFilmTitles(films) {
   return films
